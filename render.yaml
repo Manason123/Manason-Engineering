@@ -19,3 +19,4 @@ services:
       - { key: ADMIN_NAME, value: Company Owner }
       - { key: ADMIN_EMAIL, sync: false }        # asked in the Render dashboard
       - { key: ADMIN_PASSWORD, sync: false }     # asked in the Render dashboard (first start only)
+      - { key: CORS_ORIGIN, sync: false }        # only if the web app is on Netlify: https://your-site.netlify.app
