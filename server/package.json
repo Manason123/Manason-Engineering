@@ -1,21 +1,25 @@
 {
-  "name": "buildtrack-server",
+  "name": "server",
   "version": "1.0.0",
   "private": true,
-  "type": "module",
-  "main": "src/index.js",
+  "main": "src/server.js",
   "scripts": {
-    "start": "node src/index.js",
-    "dev": "node --watch src/index.js"
+    "start": "node src/server.js",
+    "test": "node --test test/",
+    "seed": "node scripts/seed.js"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   },
   "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "cors": "^2.8.5",
-    "express": "^4.19.2",
-    "jsonwebtoken": "^9.0.2",
-    "pg": "^8.12.0"
+    "bcryptjs": "^3.0.3",
+    "better-sqlite3": "^13.0.3",
+    "exceljs": "^4.4.0",
+    "express": "^5.3.0",
+    "express-rate-limit": "^8.7.1",
+    "helmet": "^8.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "multer": "^2.4.0",
+    "pdfkit": "^0.20.2"
   }
 }
