@@ -7,7 +7,7 @@
 
 [build.environment]
   NODE_VERSION = "20"
-  VITE_API_URL="https://URL-YAWE-NYAYO.onrender.com"
+  VITE_API_URL="https://URL-manason-engineering.onrender.com"
 [[headers]]
   from = "/*"
   to ="/index.html"
