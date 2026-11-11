@@ -1,0 +1,12 @@
+{
+  "name": "buildtrack-pro",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install:all": "npm --prefix server ci && npm --prefix client ci",
+    "build": "npm --prefix client run build",
+    "start": "npm --prefix server start",
+    "test": "npm --prefix server test",
+    "seed": "npm --prefix server run seed"
+  }
+}

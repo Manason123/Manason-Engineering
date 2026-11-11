@@ -1,0 +1,21 @@
+# Render.com blueprint: ONE service that serves the web app AND the API + database (SQLite on a persistent disk).
+# No Netlify and no CORS needed: open the Render URL and sign in.
+# NOTE: persistent disks need a paid instance type; on the free plan data is lost at every restart.
+services:
+  - type: web
+    name: buildtrack-api
+    runtime: node
+    plan: starter
+    buildCommand: npm --prefix client ci && npm --prefix client run build && npm --prefix server ci --omit=dev
+    startCommand: node server/src/server.js
+    healthCheckPath: /api/health
+    disk:
+      name: buildtrack-data
+      mountPath: /var/data
+      sizeGB: 5
+    envVars:
+      - { key: NODE_VERSION, value: "22" }
+      - { key: DATA_DIR, value: /var/data }
+      - { key: ADMIN_NAME, value: Company Owner }
+      - { key: ADMIN_EMAIL, sync: false }        # asked in the Render dashboard
+      - { key: ADMIN_PASSWORD, sync: false }     # asked in the Render dashboard (first start only)
