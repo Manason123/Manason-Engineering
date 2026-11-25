@@ -1,0 +1,6 @@
+{
+  "name": "Manason Engineering CMS",
+  "description": "Construction and civil engineering operations platform for projects, site stores, labor attendance, weighted progress, and financial governance.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
